@@ -14,13 +14,16 @@ class JokeFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
     public function definition(): array
-    {
-        return [
-            'type' => $this->faker->randomElement(['programming', 'general']),
-            'setup' => $this->faker->sentence(6),     
-            'punchline' => $this->faker->sentence(8), 
-        ];
-    }
+        {
+            return [
+                'type' => $this->faker->randomElement(['programming', 'general', 'dad', 'dark']),
+                'setup' => $this->faker->sentence(6),
+                'punchline' => $this->faker->sentence(8),
+            ];
+
+            return $this->faker->randomElement($jokes);
+        }
 
 }

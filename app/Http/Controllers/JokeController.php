@@ -7,9 +7,8 @@ use App\Models\Joke;
 
 class JokeController extends Controller
 {
-public function index()
-{
-    $jokes = Joke::all();
-    return view('welcome', compact('jokes'));
-}
+        public function index() {
+            return Joke::all();
+        }
+ 
 }
